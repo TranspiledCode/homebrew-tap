@@ -5,23 +5,23 @@
 class Hubcap < Formula
   desc "GitHub in your terminal — browse issues and PRs, check CI, merge, and act with keyboard shortcuts"
   homepage "https://github.com/TranspiledCode/hubcap-app"
-  version "0.7.0"
+  version "0.8.0"
   license "MIT"
 
   depends_on "gh"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/TranspiledCode/hubcap-app/releases/download/v0.7.0/hubcap_Darwin_x86_64.tar.gz"
-      sha256 "9724da77225c67bcd9a974eea70583cea7114b9500b13b37f33748dd90774ed9"
+      url "https://github.com/TranspiledCode/hubcap-app/releases/download/v0.8.0/hubcap_Darwin_x86_64.tar.gz"
+      sha256 "4cbd7b51fa5c71380e738a63c8565b2cf78cc25ac61240f243c01f870bdb5869"
 
       define_method(:install) do
         bin.install "hubcap"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/TranspiledCode/hubcap-app/releases/download/v0.7.0/hubcap_Darwin_arm64.tar.gz"
-      sha256 "c31f4feddc58aab0ae3e5a6e279da06ea86fa15b2db0895d160b61a0fa62e27a"
+      url "https://github.com/TranspiledCode/hubcap-app/releases/download/v0.8.0/hubcap_Darwin_arm64.tar.gz"
+      sha256 "0a8e5a8481f64f3fa2062483c70f5f4933ef2391cfcf0c3cffd18c5fc7f8748b"
 
       define_method(:install) do
         bin.install "hubcap"
@@ -31,15 +31,15 @@ class Hubcap < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/TranspiledCode/hubcap-app/releases/download/v0.7.0/hubcap_Linux_x86_64.tar.gz"
-      sha256 "ffa135c1080f7f68083330fa3fc220360470e157529981a93e9418627ef944d2"
+      url "https://github.com/TranspiledCode/hubcap-app/releases/download/v0.8.0/hubcap_Linux_x86_64.tar.gz"
+      sha256 "49b3f245b7bbae523ec6d86c78ccacfaa180ff82ba13dcaaaf81734772ba016c"
       define_method(:install) do
         bin.install "hubcap"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/TranspiledCode/hubcap-app/releases/download/v0.7.0/hubcap_Linux_arm64.tar.gz"
-      sha256 "839c0685f05bd8cf3fc3e636b9cb290f4eb419796ae29ee09c19980b41c571cd"
+      url "https://github.com/TranspiledCode/hubcap-app/releases/download/v0.8.0/hubcap_Linux_arm64.tar.gz"
+      sha256 "6a5c12fabc122f43630a043350507428b9606eb405781160ea9ba6a187f39129"
       define_method(:install) do
         bin.install "hubcap"
       end
